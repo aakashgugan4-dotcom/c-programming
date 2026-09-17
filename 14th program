@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    float mark;
+
+    // Read input from the user
+    printf("Enter marks (0 - 100): ");
+    if (scanf("%f", &mark) != 1) {
+        printf("Invalid input! Please enter a numeric value.\n");
+        return 1;
+    }
+
+    // Determine and display grade
+    if (mark < 0 || mark > 100) {
+        printf("Invalid mark! Please enter a value between 0 and 100.\n");
+    } else if (mark >= 90) {
+        printf("Grade: A\n");
+    } else if (mark >= 80) {
+        printf("Grade: B\n");
+    } else if (mark >= 70) {
+        printf("Grade: C\n");
+    } else if (mark >= 60) {
+        printf("Grade: D\n");
+    } else if (mark >= 50) {
+        printf("Grade: F\n");
+    } else {
+        printf("Grade: E (Fail)\n");
+    }
+
+    return 0;
+}
