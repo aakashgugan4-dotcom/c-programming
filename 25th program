@@ -1,0 +1,17 @@
+#include <stdio.h>
+double square(double num) {
+    return num * num;
+}
+
+int main() {
+    double inputNumber, result;
+
+    // Get input from the user
+    printf("Enter a number: ");
+    scanf("%lf", &inputNumber);
+    result = square(inputNumber);
+
+    printf("The square of %.2lf is %.2lf\n", inputNumber, result);
+
+    return 0;
+}
