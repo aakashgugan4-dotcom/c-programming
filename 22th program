@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    long long num, originalNum, reversedNum = 0;
+    int remainder;
+
+    printf("Enter an integer: ");
+    scanf("%lld", &num);
+    if (num < 0) {
+        printf("%lld is not a palindrome.\n", num);
+        return 0;
+    }
+
+    originalNum = num;
+    while (num > 0) {
+        remainder = num % 10;                     // Extract the last digit
+        reversedNum = reversedNum * 10 + remainder; // Append it to the reversed number
+        num /= 10;                                // Remove the last digit
+    }
+    if (originalNum == reversedNum) {
+        printf("%lld is a palindrome.\n", originalNum);
+    } else {
+        printf("%lld is not a palindrome.\n", originalNum);
+    }
+
+    return 0;
+}
